@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-Mesh</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>G-Mesh</h1>
+        <h2>v2.0</h2>
+        <br>
+        A Blender Add-on for Retopology
+    </header>
+    
+    <div class="nav-bar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/docs.html">Documentation</a></li>
+            <li><a href="https://blendermarket.com/products/g-mesh" target="_blank">Get G-Mesh</a></li>
+        </ul>
+    </div>
+
+
+    <div class="grid-container">
+        <div class="container" style="grid-area: a;">
+            <h3>Painless Retopology</h3>
+            <hr>
+            <p>
+                Retopology is essential but disliked by many 3D artists. Tweaking vertices/edges/faces for long periods of time can be frustrating for anybody.
+                <br><br>
+                With G-Mesh, the user can draw retopology in a natural and intuitive way by making use of Blender’s Grease Pencil.
+            </p>
+        </div>
+
+        <div class="container" style="grid-area: b;">
+            <h3>How it works</h3>
+            <hr>
+            <p>
+                G-Mesh adds a point each time Grease Pencil strokes cross each other. The points are later connected with edges and filled with faces.
+                <br>
+                <a href="docs.html#how-to-use">See more...</a>
+            </p>
+        </div>
+
+        <div class="container" style="grid-area: c; border-color: #FFCE6F;">
+            <h3>What's new in 2.0?</h3>
+            <hr>
+            <p>
+                <ul>
+                    <li>Optimized Mesh Generation: Fixed exponential processing time and other unnecessary calculations</li>
+                    <br>
+                    The processing time of converting a Grease Pencil UV sphere to a mesh 
+                    (in seconds).
+                    <table>
+                        <tr>
+                            <th>UV Sphere Segments and Rings</th>
+                            <th>v1.0</th>
+                            <th>v2.0</th>
+                        </tr>
+                        <tr>
+                            <th>14 x 14</th>
+                            <th>19.44</th>
+                            <th>0.16</th>
+                        </tr>
+                        <tr>
+                            <th>15 x 15</th>
+                            <th>56.64</th>
+                            <th>0.22</th>
+                        </tr>
+                        <tr>
+                            <th>16 x 16</th>
+                            <th>242.93</th>
+                            <th>0.28</th>
+                        </tr>
+                    </table>
+                    <br>
+                    <li>Auto Generation: Progressively generates the mesh for a non-destructive workflow
+                    </li><li>Threads: Generate the mesh without freezing Blender
+                    </li><li>Fixed cyclic strokes not closing edges</li>
+
+                </ul>
+                
+            </p>
+        </div>
+    </div>
+</body>
+</html>

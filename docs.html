@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-Mesh Docs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<body>
+    <div class="nav-bar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/docs.html">Documentation</a></li>
+            <li><a href="https://blendermarket.com/products/g-mesh" target="_blank">Get G-Mesh</a></li>
+        </ul>
+    </div>
+
+    <div class="doc-div">
+        <ul class="doc-side-panel">
+            <li><a href="#installation">Installation</a></li>
+            <hr>
+            <li><a href="#setup">Setup</a></li>
+            <hr>
+            <li><a href="#how-to-use">How to use</a></li>
+            <hr>
+            <li><a href="#how-not-to-use">How NOT to use</a></li>
+            <hr>
+            <li><a href="#workflow">Workflow</a></li>
+            <li><a href="#symmetry">&emsp;- Symmetry</a></li>
+            <hr>
+            <li><a href="#asset-library">Asset Library</a></li>
+            <hr>
+            <li><a href="#help">Help</a></li>
+        </ul>
+        <div class="doc-text">
+            <section id="installation">Installation</section>
+            <br>
+            
+            <p>To install the G-Mesh Add-on in Blender:</p>
+            
+            <ol>
+                <li>Open Blender</li>
+                <li>Go to Edit > Preferences > Add-ons</li>
+
+                <img src="images\install-1.png" alt="install-1">
+
+                <li>Click Install and select the G-Mesh ZIP folder you downloaded (Don't extract the ZIP).</li>
+                <img src="images\install-2.png" alt="install-2">
+                <li>Enable the "GMesh" Add-on</li>
+                <img src="images\install-3.png" alt="install-3">
+            </ol>
+            
+            <br>
+            The add-on is located at 3D Viewport > Sidebar > G-Mesh
+            <img src="images/g-mesh-location.png" alt="g-mesh-location">
+            
+            
+            <hr>
+            <section id="setup">Setup</section>
+            <br>
+            <p>The Grease Pencil object is mainly used for 2D animation and storyboarding, but since we are using it for retopology, it is recommended to stay in a single frame and layer.</p>
+            
+            <p>To set up a Grease Pencil for G-Mesh, click on the active sculpt object and press [Setup GPencil]. This will add a Grease Pencil and set up all the parameters and options recommended for G-Mesh.</p>
+
+            <img src="images/setup-gpencil.png" alt="setup-gpencil">
+
+            <p>To draw, select the Grease Pencil object and change from “Object Mode” to “Draw Mode” in the top-left.</p>
+
+            <img src="images/draw-mode.png" alt="draw-mode">
+
+            <hr>
+            <section id="how-to-use">How to use</section>
+            <br>
+            <p>I will draw a square with four strokes:</p>
+            
+            <img src="images/how-to-use-1.png" alt="how-to-use-1.png">
+
+            <p>The add-on adds a vertex each time the strokes cross each other, then, it connects them with edges and adds faces.</p>
+            <p>To use the add-on, go to the side panel in the viewport and click on the G-Mesh tab:</p>
+
+            <img src="images/g-mesh-location.png" alt="g-mesh-location">
+
+            <p>This is the add-on panel. Finally, I’ll press Full-Generation to generate the mesh.</p>
+
+            <img src="images/how-to-use-3.png" alt="how-to-use-3">
+
+            <br>
+            <section id="how-not-to-use">How <b>not</b> to use</section>
+            <br>
+            
+            <p>I will make a square but in one continuous stroke:</p>
+
+            <img src="images/how-not-to-use-1.png" alt="how-not-to-use-1">
+
+            <p>There are no lines crossing each other, so no vertices are created.</p>
+            <br>
+            <p>Now, I will make a square with crossed lines in one continuous stroke:</p>
+
+            <img src="images/how-not-to-use-2.png" alt="how-not-to-use-2">
+
+            <p>This won’t generate anything because vertices are created <b>only when two different strokes cross each other</b>.</p>
+
+            <hr>
+            <section id="workflow">Workflow</section>
+            <br>
+            <p>For this example, I will use this head sculpt.</p>
+
+            <div class="sketchfab-embed-wrapper"> <iframe title="Stylized Anime Female Head" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="640" height="480" src="https://sketchfab.com/models/e8d04325a74e46a98a6494abe721a8b2/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/stylized-anime-female-head-e8d04325a74e46a98a6494abe721a8b2?utm_medium=embed&utm_campaign=share-popup&utm_content=e8d04325a74e46a98a6494abe721a8b2" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Stylized Anime Female Head </a> by <a href="https://sketchfab.com/rodesqa?utm_medium=embed&utm_campaign=share-popup&utm_content=e8d04325a74e46a98a6494abe721a8b2" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Rodesqa </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=e8d04325a74e46a98a6494abe721a8b2" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
+
+
+            <br>
+            <p>I like to start with the edge flow first.</p>
+
+            <p>For the edge flow, I will create a new Grease Pencil material and make it yellow.</p>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6lT7HzEAibk?si=O27or0h8XRvXLJ86" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            <hr>
+            <section id="symmetry">Symmetry</section>
+            <br>
+
+            <p>For symmetric objects like this head, it is a good idea to have a line in the middle of the mesh so the mesh is connected in the middle, otherwise, there would be a gap.</p>
+
+            <p>To add this line, we can either fill the gap manually afterward or draw the contour of the sculpt and shrinkwrap it to its surface.</p>
+
+            <img src="images/symmetry.png" alt="symmetry">
+
+            <p>To draw the contour:</p>
+            <ol>
+                <li>Get into orthographic side view</li>
+                <li>Disable the shrinkwrap modifier while drawing</li>
+                <li>Set the stroke placement to Origin so the stroke doesn’t get placed on the side of the face when tracing</li>
+            </ol>
+            
+            <p>Make sure to get concave areas well so the shrinkwrap modifier works better.</p>
+
+            <p>Once the contour is drawn, duplicate the shrinkwrap modifier, set the offset to 0, and press ctrl + A to apply it.</p>
+
+            <p>Here's an example:</p>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/kQbmsEWBeUY?si=9CYQ2voO25KNeuZE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>            
+            
+            <br>
+            <br>
+
+            <p>Now, with a black material, I will start filling the edge flow with edges to generate the mesh.</p>
+
+            <p>Here's a process overview:</p>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/bFqsjyXZ6Gw?si=7oE_WoUrPy8W7kSV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            
+            <p>
+                When the mesh starts generating, sometimes you may accidentally create n-gons (non-square faces) when most retopology requires quads (square faces). To highlight these n-gons, we can use the Filter Faces by Sides geometry node that comes with the add-on’s asset library.
+            </p>
+
+            <hr>
+            <section id="asset-library">Asset Library</section>
+            <br>
+
+            <p>G-Mesh comes with an asset library that includes the Filter by Sides geometry node, which keeps or removes faces with a specified amount of sides.</p>
+
+            <p>To Add these to your asset browser, on the Add-On panel, press Add Asset Library:</p>
+
+            <img src="images/asset-library-1.png" alt="asset-library-1">
+            
+            <p>You can see all the asset libraries in Edit > Preferences > File Paths, and scroll down to Asset Libraries.</p>
+
+            <br>
+
+            <p>Now, we can drag “Filter Faces by Sides” to our object through the asset browser and locate the n-gons:</p>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-Bxbn70k8YE?si=PCqzQjZbWGxnBlDP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            
+            <hr>
+            <section id="help">Help</section>
+            <br>
+            <p>If you have questions or comments about G-Mesh or the documentation you can contact me through the <a href="https://blendermarket.com/products/g-mesh" target="_blank">Blender Market product page.</a></p>
+
+            <br>
+            <br>
+            <p style="text-align: center;">10/2/2023</p>
+            <hr style="margin-bottom: 0;">
+
+        </div>
+    </div>
+
+</body>
+</html>

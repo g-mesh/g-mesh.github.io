@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1b1b1f;
+    color: #fffff5db;
+    margin: 0 auto;
+}
+
+.nav-bar {
+    margin: 0;
+    background-color: rgba(98, 104, 114, 0.541);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.nav-bar > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    white-space: nowrap;
+    width: 100%;
+    max-width: 1080px;
+    margin: auto;
+    text-align: right;
+}
+
+.nav-bar > ul > li {
+    display: inline-block;
+    line-height: 100%;
+    background-color: #1b1b1f;
+    padding: 0.5em;
+    border-radius: 1em;
+    margin: 0.25em;
+}
+
+.nav-bar > ul > li > a {
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    margin: 0 auto;
+    padding: 0 1em;
+    margin-top: 6em;
+    margin-bottom: 4em;
+    max-width: 1080px;
+
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 96px;
+    margin: 0 0;
+    display: inline;
+}
+
+h2 {
+    font-size: 48px;
+    color: #FFCE6F;
+    margin: 0 0;
+    display: inline;
+}
+
+h3 {
+    font-size: 30px;
+    margin: 0;
+}
+
+p, ul, li {
+    text-align: left;
+    line-height: 200%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        "a c" 
+        "b c";
+    margin: 0 auto;
+    max-width: 1080px;
+    gap: 1em;
+}
+
+.container {
+    max-width: 1080px;
+    border: solid;
+    border-width: 2px;
+    border-color: aqua;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+th, tr, table {
+    border: solid;
+    border-width: 2px;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 0.5em;
+    font-weight: normal;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-areas: 
+        "a" 
+        "b"
+        "c";
+    }
+}
+
+a {
+    color:aqua;
+    text-decoration: none;
+}
+
+
+/* Documentation Page */
+
+.doc-div {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    top: 2.5em;
+}
+
+.doc-side-panel {
+    margin: 0;
+    overflow: auto;
+    width: 20%;
+    background-color: rgb(38, 39, 43);
+    padding: 1em;
+    border-right-style: solid;
+    border-width: 2px;
+}
+
+.doc-side-panel > li {
+    list-style-type: none;
+    font-weight: bold;
+}
+
+.doc-side-panel > li > a {
+    color: white;
+}
+
+.doc-text {
+    width: 80%;
+    padding: 2em;
+    padding-bottom: 0;
+    overflow: auto;
+}
+
+.doc-text > section {
+    padding-top: 2em;
+    margin-top: -2em;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.doc-text > hr {
+    margin: 4em -2em 2em;
+}
+
+.doc-text > .container {
+    width: max-content;
+    border-color: white;
+}
+
+img {
+    margin: 2em;
+    max-height: 25em;
+    max-width: 40em;
+    box-shadow: 0 0 5px lightblue;
+    display: block;
+}
