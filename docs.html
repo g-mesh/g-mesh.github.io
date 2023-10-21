@@ -10,6 +10,7 @@
 <body>
     <div class="nav-bar">
         <ul>
+            <li id="version-text">G-Mesh Docs v2.2.1</li>
             <li><a href="/">Home</a></li>
             <li><a href="/docs.html">Documentation</a></li>
             <li><a href="https://blendermarket.com/products/g-mesh" target="_blank">Get G-Mesh</a></li>
@@ -23,6 +24,7 @@
             <li><a href="#setup">Setup</a></li>
             <hr>
             <li><a href="#how-to-use">How to use</a></li>
+            <li><a href="#closed-shapes">&emsp;- Closed shapes</a></li>
             <hr>
             <li><a href="#how-not-to-use">How NOT to use</a></li>
             <hr>
@@ -90,9 +92,35 @@
                 <p>G-Mesh analyzes the Grease Pencil without taking into account any modifiers, for example, mirrored strokes created by the Mirror Modifier won't intersect with the real strokes.
                 <p>To put it simply, Grease Pencil modifiers are only for visualization.</p>
             </div>
-
+            
+            <hr>
+            <section id="closed-shapes">Creating closed shapes</section>
             <br>
-            <section id="how-not-to-use">How <b>not</b> to use</section>
+
+            <p>
+                I will create a closed circle mesh:
+            </p>
+
+            <img src="images/closed-shapes-1.png" alt="closed-shapes-1">
+            
+            <p>
+                Since the ring strokes are disconnected, we would get an incomplete mesh.
+            </p>
+
+            <img src="images/closed-shapes-2.png" alt="closed-shapes-2">
+            
+            <p>Now I will draw the ring strokes again with Auto Merge enabled (the Setup GPencil operator enables it by default)</p>
+            
+            <img src="images/closed-shapes-3.png" alt="closed-shapes-3">
+            Auto Merge enabled
+            <img src="images/closed-shapes-4.png" alt="closed-shapes-4">
+
+            <img src="images/closed-shapes-5.png" alt="closed-shapes-5">
+
+            <p>This time, G-Mesh created a closing edge when it detected a closed stroke</p>
+
+            <hr>
+            <section id="how-not-to-use">How not to use</section>
             <br>
             
             <p>I will make a square but in one continuous stroke:</p>
@@ -119,8 +147,24 @@
             <p>I like to start with the edge flow first.</p>
 
             <p>For the edge flow, I will create a new Grease Pencil material and make it yellow.</p>
+            
+            <div class="container">
+                * Materials, brush sizes and opacity don't have any impact on the add-on's result.
+                <br>
+                <br>
+                In this example, I use materials to better organize and visualize my work.
+            </div>
+            <br>
 
             <iframe width="560" height="315" src="https://www.youtube.com/embed/6lT7HzEAibk?si=O27or0h8XRvXLJ86" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            
+            <br>
+            <br>
+
+            <p>If your device slows down when using G-Mesh, you can adjust the stroke resolution 
+                found in the top bar, Stroke > Simplify. The higher the value, the lower the stroke resolution. (The Setup GPencil operator sets this value to 0.010 by default.)</p>
+
+                <img src="images/simplify.png" alt="simplify">
 
             <hr>
             <section id="symmetry">Symmetry</section>
@@ -185,7 +229,8 @@
 
             <br>
             <br>
-            <p style="text-align: center;">10/2/2023</p>
+            <p style="text-align: center;">Created: 10/2/2023</p>
+            <p style="text-align: center;">Last Updated: 10/21/2023</p>
             <hr style="margin-bottom: 0;">
 
         </div>
